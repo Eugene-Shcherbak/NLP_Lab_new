@@ -1,4 +1,4 @@
-def chunk_document(doc: str, desired_chunk_size: int = 500, max_chunk_size: int = 500):
+def chunk_document(doc: str, desired_chunk_size: int = 500, max_chunk_size: int = 600):
     chunk = ''
     for line in doc.splitlines():
         chunk += line + '\n'
@@ -9,7 +9,7 @@ def chunk_document(doc: str, desired_chunk_size: int = 500, max_chunk_size: int 
         yield chunk
 
 
-def chunk_documents(docs: [str], desired_chunk_size: int = 500, max_chunk_size: int = 500):
+def chunk_documents(docs: [str], desired_chunk_size: int = 500, max_chunk_size: int = 600):
     chunks = []
     for doc in docs:
         chunks += list(chunk_document(doc))
