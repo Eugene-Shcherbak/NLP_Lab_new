@@ -54,6 +54,10 @@ bot = QuestionAnsweringBot(docs)
 
 demo = gr.Interface(
     fn=bot.answer_question,
+    title = "Завдання зроблено Стеюком Павлом(КН-416) та Щербаком Євгеном(КН-416).\n"
+            "Rag працює з ботом Groq, та використовує 4 тексти:\n"
+            "fishing, ai, short bio of Yevrilo and Pavrilo, biology.\n"
+            "Повні файли можна знайти на сторінці гітхабу:https://github.com/Eugene-Shcherbak/NLP_Lab_new\n",
     inputs=[
         gr.Textbox(label="Question", placeholder="Ask your question here"),
         gr.Textbox(label="API key", placeholder="Provide API key here"),
